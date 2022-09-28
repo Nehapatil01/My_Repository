@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Document</title>
+          <style>
+           h1{
+                border:20% ;
+                border-radius: 20%;
+                text-align:center ;
+                color: rgb(84, 24, 24);
+                background-color: rgb(195, 134, 252);
+
+             }
+          </style>
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="row" style= "margin-top: 5%; margin-left: 2%; margin-right: 5%; "  >
+         <div class="col-lg-2"> </div>
+         <div class=" col-lg-8" style=" background-color: bisque; padding-bottom: 10%;"  >
+        <h1> CALCULATOR </h1>
+        <label for="" style=" padding-left: 15%; padding-top: 5%; " >NUM1</label>
+        <input type="text" id="input1" placeholder="number">
+        <button onclick="add()" style="background-color: rgb(241, 135, 135); padding-left: 4%;padding-right: 4%;">+</button>
+        <button onclick="sub()" style="background-color: rgb(255, 255, 149); padding-left: 4%;padding-right: 4%;">-</button>
+           <br><br>
+
+           <label for="" style=" padding-left: 15%;" >NUM2</label>
+           <input type="text" id="input2" placeholder="number">
+           <button onclick="mul()" style="background-color: rgb(201, 216, 191); padding-left: 4%;padding-right: 4%;">*</button>
+           <button onclick="div()"  style="background-color: rgb(192, 140, 240); padding-left: 4%;padding-right: 4%;">/</button>
+           <br><br>
+
+           
+           <label for=""style=" padding-left: 15%;">Result</label>
+           <input type="text" id="output" placeholder="number">
+           <button  onclick="clr()" style="background-color: rgb(159, 255, 250); padding-left: 4%;padding-right: 4%;">clear</button>
+      </div>  
+      <div class="col-lg-2"> </div>
+      </div>
+
+   </div>
+<script>
+    
+    function add()
+    {
+      var x = document.getElementById("input1").value
+      var y = document.getElementById("input2").value
+      z= parseInt(x)+parseInt(y)
+      document.getElementById("output").value=z
+    }
+
+    function sub()
+    {
+      var x = document.getElementById("input1").value
+      var y = document.getElementById("input2").value
+      z= parseInt(x)-parseInt(y)
+      document.getElementById("output").value=z
+    }
+
+    function mul()
+    {
+      var x = document.getElementById("input1").value
+      var y = document.getElementById("input2").value
+      z= parseInt(x)*parseInt(y)
+      document.getElementById("output").value=z
+    }
+
+    function div()
+    {
+      var x = document.getElementById("input1").value
+      var y = document.getElementById("input2").value
+      z= parseInt(x)/parseInt(y)
+      document.getElementById("output").value=z
+    }
+
+    function clr()
+    {
+      document.getElementById("input1").value=" "
+      document.getElementById("input2").value=" "
+      document.getElementById("output").value=" "
+    }
+
+</script>
+</body>
+</html>
